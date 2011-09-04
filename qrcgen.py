@@ -40,11 +40,15 @@ def valid_path(string):
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description='Generates a qrc (Qt resource file) from all files on a directory tree.',
         epilog='A directory.qrc file will be generated in the current directory')
-    parser.add_argument('Directory',metavar='directory', 
+    parser.add_argument('directory',metavar='directory', 
         type=valid_path,
         help='A valid path, full or local.')
-    parser.add_argument('Prefix',metavar='prefix',
+    parser.add_argument('prefix',metavar='prefix',
         type=str,
         help='The prefix in the qrc file under which the resources will be availablel.')
 
-    parser.print_help()
+    #~ parser.print_help()
+    args = parser.parse_args()
+    prefix = args.prefix
+    resname = os.path.split(args.directory)[-1]
+    scan(args.directory)
