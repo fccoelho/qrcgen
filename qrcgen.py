@@ -45,7 +45,7 @@ if __name__=="__main__":
         help='A valid path, full or local.')
     parser.add_argument('prefix',metavar='prefix',
         type=str,
-        help='The prefix in the qrc file under which the resources will be availablel.')
+        help='The prefix in the qrc file under which the resources will be available.')
 
     #~ parser.print_help()
     args = parser.parse_args()
