@@ -1,0 +1,4 @@
+This Script generates a qrc file (Qt Resource file) for the entire contents of a directory tree.
+
+Usage:
+
